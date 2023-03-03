@@ -27,12 +27,13 @@ body {
 }
 
 .time-row {
-    height:60px;
+    height:70px;
+    border-bottom:2px solid blanchedalmond;
 }
 
 textarea {
     resize: none;
-    border:2px solid grey;
+    border: 1px solid grey;
 }
 
 
