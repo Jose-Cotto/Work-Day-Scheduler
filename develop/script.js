@@ -22,4 +22,4 @@ var today = dayjs();
  var date = today.format('MMMM D, YYYY h:mm A');
 console.log(today);
 
-todayContainerEl.text(date)
+todayContainerEl.text(date);

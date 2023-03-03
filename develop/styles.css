@@ -6,5 +6,34 @@
 body {
     background-color:blanchedalmond;
     font-family: 'Montserrat', sans-serif;
+    min-height:100vh;
 
 }
+
+
+.save-btn {
+    border:none;
+    background-color:salmon;
+    color:white;
+    border-top-right-radius:15px;
+    border-bottom-right-radius:15px;
+}
+
+.hour {
+    background-color:grey;
+    text-align:center;
+    border-top-left-radius:15px;
+    border-bottom-left-radius:15px;
+}
+
+.time-row {
+    height:60px;
+}
+
+textarea {
+    resize: none;
+    border:2px solid grey;
+}
+
+
+
