@@ -1,3 +1,4 @@
+'use strict';
 // AS AN employee with a busy schedule
 // I WANT to add important events to a daily planner
 // SO THAT I can manage my time effectively
@@ -25,3 +26,8 @@ var today = dayjs();
 console.log(today);
 
 todayContainerEl.text(date);
+
+var hour = dayjs().hour()
+console.log(hour);
+
+console.log(dayjs(today).toDate())

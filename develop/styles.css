@@ -19,11 +19,12 @@ body {
     border-bottom-right-radius:15px;
 }
 
-.hour {
+#hour {
     background-color:grey;
     text-align:center;
     border-top-left-radius:15px;
     border-bottom-left-radius:15px;
+    font-weight:bold;
 }
 
 .time-row {
