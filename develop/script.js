@@ -2,7 +2,6 @@
 // I WANT to add important events to a daily planner
 // SO THAT I can manage my time effectively
 
-
 // //GIVEN I am using a daily planner to create a schedule
 // WHEN I open the planner
 // THEN the current day is displayed at the top of the calendar
@@ -16,9 +15,12 @@
 // THEN the text for that event is saved in local storage
 // WHEN I refresh the page
 // THEN the saved events persist
-var todayContainerEl = $('#today')
 
+// create variable for the div that will contain the date and time
+var todayContainerEl = $('#today')
+//create variable that contains the day function
 var today = dayjs();
+//use new variable to format dayjs and change text content of container
  var date = today.format('MMMM D, YYYY h:mm A');
 console.log(today);
 
