@@ -24,32 +24,27 @@ var today = dayjs();
 //use new variable to format dayjs and change text content of container
 var date = today.format('MMMM D, YYYY h:mm A');
 
-
 todayContainerEl.text(date);
 
-var hour = dayjs().hour();
-console.log(hour);
 
-// var workHours = $('.time-row').attr('id');
-// console.log(workHours)
+var hour = dayjs().hour().toString();
 
-var workHour = $('.row').children()
-console.log(workHour);
 
 function timeColorCheck() {
-
+    
     $('.time-row').each(function () {
-
-
+        var workHour = $(this).attr('id');
+        console.log('workHour ' + workHour);
+        // console.log('hour ' + hour);
 
         if (workHour > hour) {
-            $('.task').addClass('plenty-of-time')
+            console.log('future');
+            $(this).children('.task').addClass('plenty-of-time');
         } else if (workHour === hour) {
-            $('.task').addClass('no-time')
+            $(this).children('.task').addClass('no-time');
         } else {
-            $('.task').addClass('out-of-time')
+            $(this).children('.task').addClass('out-of-time');
         }
-
     })
 }
 
