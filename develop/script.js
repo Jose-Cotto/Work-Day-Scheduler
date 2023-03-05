@@ -37,6 +37,8 @@ function timeColorCheck() {
         // console.log('hour ' + hour);
 
         if (workHour > hour) {
+            
+            console.log(workHour);
             $(this).children('.task').addClass('plenty-of-time');
         } else if (workHour === hour) {
             $(this).children('.task').addClass('no-time');
@@ -46,8 +48,7 @@ function timeColorCheck() {
     })
 }
 
-$(saveBtn).on('click', function (event) {
-    event.preventDefault();
+$(saveBtn).on('click', function () {
     var task = $(this).siblings('.task').val();
 
     console.log(task);
@@ -57,13 +58,21 @@ $(saveBtn).on('click', function (event) {
     console.log(time);
 
 
-    if(task === '') {
+    if (task === '') {
         alert('You must enter a task to save!');
     }
-    
+
     localStorage.setItem(time, task);
 })
 
-$('9 .task').val(localStorage.getItem('9'));
+$('#9 .task').val(localStorage.getItem('9'));
+$('#10 .task').val(localStorage.getItem('10'));
+$('#11 .task').val(localStorage.getItem('11'));
+$('#12 .task').val(localStorage.getItem('12'));
+$('#13 .task').val(localStorage.getItem('13'));
+$('#14 .task').val(localStorage.getItem('14'));
+$('#15 .task').val(localStorage.getItem('15'));
+$('#16 .task').val(localStorage.getItem('16'));
+$('#17 .task').val(localStorage.getItem('17'));
 
 timeColorCheck();

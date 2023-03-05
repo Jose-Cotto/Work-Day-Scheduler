@@ -39,17 +39,17 @@ textarea {
 }
 
 .plenty-of-time {
-    background-color:rgba(0, 128, 0, 0.582);
+    background-color:rgba(0, 128, 0, 0.507);
     
 }
 
 .out-of-time {
-    background-color:rgba(255, 0, 0, 0.61);
+    background-color:rgba(255, 0, 0, 0.5);
     
 }
 
 .no-time {
-    background-color:rgba(0, 0, 0, 0.397);
+    background-color:rgba(0, 0, 0, 0.493);
    
 }
 
