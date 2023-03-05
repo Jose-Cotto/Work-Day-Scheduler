@@ -16,7 +16,7 @@
 // THEN the text for that event is saved in local storage
 // WHEN I refresh the page
 // THEN the saved events persist
-
+var saveBtn = $('.save-btn');
 // create variable for the div that will contain the date and time
 var todayContainerEl = $('#today')
 //create variable that contains the day function
@@ -34,11 +34,9 @@ function timeColorCheck() {
     
     $('.time-row').each(function () {
         var workHour = $(this).attr('id');
-        console.log('workHour ' + workHour);
         // console.log('hour ' + hour);
 
         if (workHour > hour) {
-            console.log('future');
             $(this).children('.task').addClass('plenty-of-time');
         } else if (workHour === hour) {
             $(this).children('.task').addClass('no-time');
@@ -48,4 +46,12 @@ function timeColorCheck() {
     })
 }
 
+$(saveBtn).on('click',function () {
+    var task = $(this).siblings('.task').val();
+    console.log(task);
+    var time = $(this).parent().attr('id');
+    console.log(time);
+
+    localStorage.setItem(time,task);
+})
 timeColorCheck();
