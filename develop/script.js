@@ -31,7 +31,7 @@ var hour = dayjs().hour().toString();
 
 
 function timeColorCheck() {
-    
+
     $('.time-row').each(function () {
         var workHour = $(this).attr('id');
         // console.log('hour ' + hour);
@@ -46,12 +46,24 @@ function timeColorCheck() {
     })
 }
 
-$(saveBtn).on('click',function () {
+$(saveBtn).on('click', function (event) {
+    event.preventDefault();
     var task = $(this).siblings('.task').val();
+
     console.log(task);
+
     var time = $(this).parent().attr('id');
+
     console.log(time);
 
-    localStorage.setItem(time,task);
+
+    if(task === '') {
+        alert('You must enter a task to save!');
+    }
+    
+    localStorage.setItem(time, task);
 })
+
+$('9 .task').val(localStorage.getItem('9'));
+
 timeColorCheck();
