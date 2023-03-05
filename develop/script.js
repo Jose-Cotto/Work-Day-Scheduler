@@ -23,11 +23,26 @@ var todayContainerEl = $('#today')
 var today = dayjs();
 //use new variable to format dayjs and change text content of container
  var date = today.format('MMMM D, YYYY h:mm A');
-console.log(today);
+
 
 todayContainerEl.text(date);
 
-var hour = dayjs().hour()
+var hour = dayjs().hour();
 console.log(hour);
+var workHours = $('.time-row').attr('id');
+console.log(workHours)
 
-console.log(dayjs(today).toDate())
+function timeColorCheck() {
+  
+    $('.time-row').each(function () {
+            
+            if(workHours > hour) {
+                $('.task').addClass('plenty-of-time')
+            } else if(workHours === hour) {
+                $('.task').addClass('no-time')
+            } else {
+                $('.task').addClass('out-of-time')
+            }
+    })
+}
+timeColorCheck();
