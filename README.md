@@ -13,7 +13,6 @@ This work day scheduler allows users to plan out there entire work day by saving
   - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
   - [Usage](#usage)
-    - [Link to Website](#link-to-website)
   - [Features](#features)
   - [Credits](#credits)
 
@@ -31,11 +30,10 @@ To use this Website open the page using the link below. Once open The current ti
 
 Fill out the task manager by using the text area to type everything out. Once your done, tap on the save buttons to save the task to the page and localStorage. If you want to reset the tasks at the end of the day, Clear your local storage keys.
 
- ### Link to Website
- https://jose-cotto.github.io/Work-Day-Scheduler/
 
 
 ![Screen shot of the work day scheduler](./develop/images/10.0.0.50_54681_index.html%20(1).png)
+Link to website: https://jose-cotto.github.io/Work-Day-Scheduler/
 
 ## Features
 * HTML
