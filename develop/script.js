@@ -1,21 +1,5 @@
 'use strict';
-// AS AN employee with a busy schedule
-// I WANT to add important events to a daily planner
-// SO THAT I can manage my time effectively
 
-// //GIVEN I am using a daily planner to create a schedule
-// WHEN I open the planner
-// THEN the current day is displayed at the top of the calendar
-// WHEN I scroll down
-// THEN I am presented with timeBlocks for standard business hours
-// WHEN I view the timeBlocks for that day
-// THEN each timeBlock is color coded to indicate whether it is in the past, present, or future
-// WHEN I click into a timeBlock
-// THEN I can enter an event
-// WHEN I click the save button for that timeBlock
-// THEN the text for that event is saved in local storage
-// WHEN I refresh the page
-// THEN the saved events persist
 var saveBtn = $('.save-btn');
 // create variable for the div that will contain the date and time
 var todayContainerEl = $('#today')
@@ -29,7 +13,6 @@ todayContainerEl.text(date);
 
 var hour = dayjs().hour().toString();
 
-
 function timeColorCheck() {
 
     $('.time-row').each(function () {
@@ -37,7 +20,7 @@ function timeColorCheck() {
         // console.log('hour ' + hour);
 
         if (workHour > hour) {
-            
+
             console.log(workHour);
             $(this).children('.task').addClass('plenty-of-time');
         } else if (workHour === hour) {
@@ -65,7 +48,7 @@ $(saveBtn).on('click', function () {
     localStorage.setItem(time, task);
 })
 
-$('#9 .task').val(localStorage.getItem('9'));
+$('#09 .task').val(localStorage.getItem('09'));
 $('#10 .task').val(localStorage.getItem('10'));
 $('#11 .task').val(localStorage.getItem('11'));
 $('#12 .task').val(localStorage.getItem('12'));
